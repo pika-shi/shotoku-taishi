@@ -22,22 +22,14 @@ class SoundViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // println("Sound: \(gameManager.getCurrentGameCount())")
         currentQuestionLabel.text
             = "\(gameManager.getCurrentGameCount()) / \(gameManager.MAX_COUNT)"
-
-        /* gameManager = GameManager()
-        if let gameManager = gameManager {
-            println("2回目以降")
-        } else {
-            println("初めて")
-            gameManager = GameManager()
-        } */
 
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self,
             selector: "update:", userInfo: nil, repeats: true)
         
-        soundManager = SoundManager(rightSound: "banana", centerSound: "mango", leftSound: "ichigo")
+        soundManager = SoundManager(rightSound: gameManager.sounds[0],
+            centerSound: gameManager.sounds[1], leftSound: gameManager.sounds[2])
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		332E39AF1AF62AEE00361ADF /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332E39AE1AF62AEE00361ADF /* GameManager.swift */; };
+		33AFE8271AF6A98E00911D6E /* grape.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 33AFE8241AF6A98E00911D6E /* grape.m4a */; };
+		33AFE8281AF6A98E00911D6E /* melon.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 33AFE8251AF6A98E00911D6E /* melon.m4a */; };
+		33AFE8291AF6A98E00911D6E /* ringo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 33AFE8261AF6A98E00911D6E /* ringo.m4a */; };
 		33C131DB1AF5D43300A2FA85 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C131DA1AF5D43300A2FA85 /* AnswerViewController.swift */; };
 		33FBD0731AF4CF6600E2B1C9 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FBD0721AF4CF6600E2B1C9 /* SoundViewController.swift */; };
 		33FBD0751AF4DAAF00E2B1C9 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FBD0741AF4DAAF00E2B1C9 /* QuestionViewController.swift */; };
@@ -35,6 +38,9 @@
 
 /* Begin PBXFileReference section */
 		332E39AE1AF62AEE00361ADF /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		33AFE8241AF6A98E00911D6E /* grape.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = grape.m4a; path = Resources/grape.m4a; sourceTree = "<group>"; };
+		33AFE8251AF6A98E00911D6E /* melon.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = melon.m4a; path = Resources/melon.m4a; sourceTree = "<group>"; };
+		33AFE8261AF6A98E00911D6E /* ringo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = ringo.m4a; path = Resources/ringo.m4a; sourceTree = "<group>"; };
 		33C131DA1AF5D43300A2FA85 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		33FBD0721AF4CF6600E2B1C9 /* SoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
 		33FBD0741AF4DAAF00E2B1C9 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +151,9 @@
 		72DE12871AF5EA3300A10067 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				33AFE8241AF6A98E00911D6E /* grape.m4a */,
+				33AFE8251AF6A98E00911D6E /* melon.m4a */,
+				33AFE8261AF6A98E00911D6E /* ringo.m4a */,
 				72DE12881AF5EA7300A10067 /* banana.m4a */,
 				72DE12891AF5EA7300A10067 /* ichigo.m4a */,
 				72DE128A1AF5EA7300A10067 /* mango.m4a */,
@@ -235,7 +244,10 @@
 				72DE128B1AF5EB7C00A10067 /* banana.m4a in Resources */,
 				72DE128C1AF5EB7C00A10067 /* ichigo.m4a in Resources */,
 				72DE128D1AF5EB7C00A10067 /* mango.m4a in Resources */,
+				33AFE8291AF6A98E00911D6E /* ringo.m4a in Resources */,
 				722D06D71AF4893B006E518B /* Main.storyboard in Resources */,
+				33AFE8281AF6A98E00911D6E /* melon.m4a in Resources */,
+				33AFE8271AF6A98E00911D6E /* grape.m4a in Resources */,
 				722D06DC1AF4893B006E518B /* LaunchScreen.xib in Resources */,
 				722D06D91AF4893B006E518B /* Images.xcassets in Resources */,
 			);
