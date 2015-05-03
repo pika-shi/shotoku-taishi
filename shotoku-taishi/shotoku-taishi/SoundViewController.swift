@@ -15,6 +15,8 @@ class SoundViewController: UIViewController {
     var count : Int = 1
     @IBOutlet weak var countDownLabel: UILabel!
     var timer : NSTimer!
+    
+    var soundManager: SoundManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,8 @@ class SoundViewController: UIViewController {
 
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self,
             selector: "update:", userInfo: nil, repeats: true)
+        
+        soundManager = SoundManager(rightSound: "banana", centerSound: "mango", leftSound: "ichigo")
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +42,7 @@ class SoundViewController: UIViewController {
         } else if (count > maxCount) {
             // よく聞いてねラベルが表示されて1秒経ったら
             // 音声を流して問題画面に遷移
+            soundManager.playSound()
             timer.invalidate()
             transition()
         } else {

@@ -15,6 +15,10 @@
 		722D06D91AF4893B006E518B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722D06D81AF4893B006E518B /* Images.xcassets */; };
 		722D06DC1AF4893B006E518B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 722D06DA1AF4893B006E518B /* LaunchScreen.xib */; };
 		722D06E81AF4893B006E518B /* shotoku_taishiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722D06E71AF4893B006E518B /* shotoku_taishiTests.swift */; };
+		72DE12851AF5DE0600A10067 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DE12841AF5DE0600A10067 /* SoundManager.swift */; };
+		72DE128B1AF5EB7C00A10067 /* banana.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 72DE12881AF5EA7300A10067 /* banana.m4a */; };
+		72DE128C1AF5EB7C00A10067 /* ichigo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 72DE12891AF5EA7300A10067 /* ichigo.m4a */; };
+		72DE128D1AF5EB7C00A10067 /* mango.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 72DE128A1AF5EA7300A10067 /* mango.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		722D06E11AF4893B006E518B /* shotoku-taishiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shotoku-taishiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		722D06E61AF4893B006E518B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		722D06E71AF4893B006E518B /* shotoku_taishiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shotoku_taishiTests.swift; sourceTree = "<group>"; };
+		72DE12841AF5DE0600A10067 /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		72DE12881AF5EA7300A10067 /* banana.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = banana.m4a; path = Resources/banana.m4a; sourceTree = "<group>"; };
+		72DE12891AF5EA7300A10067 /* ichigo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = ichigo.m4a; path = Resources/ichigo.m4a; sourceTree = "<group>"; };
+		72DE128A1AF5EA7300A10067 /* mango.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = mango.m4a; path = Resources/mango.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 				722D06D51AF4893B006E518B /* Main.storyboard */,
 				722D06D81AF4893B006E518B /* Images.xcassets */,
 				722D06DA1AF4893B006E518B /* LaunchScreen.xib */,
+				72DE12861AF5DE3700A10067 /* Library */,
 				722D06CF1AF4893B006E518B /* Supporting Files */,
 			);
 			path = "shotoku-taishi";
@@ -96,6 +105,7 @@
 		722D06CF1AF4893B006E518B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				72DE12871AF5EA3300A10067 /* Resources */,
 				722D06D01AF4893B006E518B /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -116,6 +126,24 @@
 				722D06E61AF4893B006E518B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		72DE12861AF5DE3700A10067 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				72DE12841AF5DE0600A10067 /* SoundManager.swift */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		72DE12871AF5EA3300A10067 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				72DE12881AF5EA7300A10067 /* banana.m4a */,
+				72DE12891AF5EA7300A10067 /* ichigo.m4a */,
+				72DE128A1AF5EA7300A10067 /* mango.m4a */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +226,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72DE128B1AF5EB7C00A10067 /* banana.m4a in Resources */,
+				72DE128C1AF5EB7C00A10067 /* ichigo.m4a in Resources */,
+				72DE128D1AF5EB7C00A10067 /* mango.m4a in Resources */,
 				722D06D71AF4893B006E518B /* Main.storyboard in Resources */,
 				722D06DC1AF4893B006E518B /* LaunchScreen.xib in Resources */,
 				722D06D91AF4893B006E518B /* Images.xcassets in Resources */,
@@ -222,6 +253,7 @@
 				33FBD0731AF4CF6600E2B1C9 /* SoundViewController.swift in Sources */,
 				33FBD0751AF4DAAF00E2B1C9 /* QuestionViewController.swift in Sources */,
 				722D06D21AF4893B006E518B /* AppDelegate.swift in Sources */,
+				72DE12851AF5DE0600A10067 /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
