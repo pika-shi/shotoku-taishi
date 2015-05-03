@@ -38,10 +38,20 @@ class SoundViewController: UIViewController {
         } else if (count > maxCount) {
             // よく聞いてねラベルが表示されて1秒経ったら
             // 音声を流して問題画面に遷移
+            timer.invalidate()
+            transition()
         } else {
             countDownLabel.text = "\(maxCount - count)"
             count++
         }
+    }
+
+    func transition() {
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let next:UIViewController = storyboard.instantiateViewControllerWithIdentifier("QuestionViewController") as! UIViewController
+
+        // next.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+        self.presentViewController(next, animated: false, completion: nil)
     }
 
     /*
