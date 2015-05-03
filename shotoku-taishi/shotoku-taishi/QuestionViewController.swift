@@ -17,6 +17,8 @@ class QuestionViewController: UIViewController {
     let GRAPE  = 4
 
     var answerArray = Array(count: 5, repeatedValue: false)
+    var gameManager: GameManager = GameManager.sharedInstance
+    @IBOutlet weak var currentQuestionLabel: UILabel!
 
     @IBOutlet weak var apple:  UILabel!
     @IBOutlet weak var melon:  UILabel!
@@ -32,6 +34,11 @@ class QuestionViewController: UIViewController {
         mango.tag  = MANGO
         banana.tag = BANANA
         grape.tag  = GRAPE
+
+        currentQuestionLabel.text
+            = "\(gameManager.getCurrentGameCount()) / \(gameManager.MAX_COUNT)"
+
+        // println("Question: \(gameManager.getCurrentGameCount())")
     }
 
     override func didReceiveMemoryWarning() {
@@ -122,6 +129,10 @@ class QuestionViewController: UIViewController {
         default:
             break
         }
+    }
+
+    @IBAction func reset(sender: AnyObject) {
+        gameManager.reset()
     }
 
     /*

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		332E39AF1AF62AEE00361ADF /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332E39AE1AF62AEE00361ADF /* GameManager.swift */; };
 		33C131DB1AF5D43300A2FA85 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C131DA1AF5D43300A2FA85 /* AnswerViewController.swift */; };
 		33FBD0731AF4CF6600E2B1C9 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FBD0721AF4CF6600E2B1C9 /* SoundViewController.swift */; };
 		33FBD0751AF4DAAF00E2B1C9 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FBD0741AF4DAAF00E2B1C9 /* QuestionViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		332E39AE1AF62AEE00361ADF /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		33C131DA1AF5D43300A2FA85 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		33FBD0721AF4CF6600E2B1C9 /* SoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
 		33FBD0741AF4DAAF00E2B1C9 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				72DE12841AF5DE0600A10067 /* SoundManager.swift */,
+				332E39AE1AF62AEE00361ADF /* GameManager.swift */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				722D06D41AF4893B006E518B /* ViewController.swift in Sources */,
 				33FBD0731AF4CF6600E2B1C9 /* SoundViewController.swift in Sources */,
 				33C131DB1AF5D43300A2FA85 /* AnswerViewController.swift in Sources */,
+				332E39AF1AF62AEE00361ADF /* GameManager.swift in Sources */,
 				33FBD0751AF4DAAF00E2B1C9 /* QuestionViewController.swift in Sources */,
 				722D06D21AF4893B006E518B /* AppDelegate.swift in Sources */,
 				72DE12851AF5DE0600A10067 /* SoundManager.swift in Sources */,

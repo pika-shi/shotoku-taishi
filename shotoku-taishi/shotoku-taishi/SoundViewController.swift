@@ -14,13 +14,25 @@ class SoundViewController: UIViewController {
 
     var count : Int = 1
     @IBOutlet weak var countDownLabel: UILabel!
+    @IBOutlet weak var currentQuestionLabel: UILabel!
     var timer : NSTimer!
     
     var soundManager: SoundManager!
+    var gameManager: GameManager = GameManager.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // println("Sound: \(gameManager.getCurrentGameCount())")
+        currentQuestionLabel.text
+            = "\(gameManager.getCurrentGameCount()) / \(gameManager.MAX_COUNT)"
+
+        /* gameManager = GameManager()
+        if let gameManager = gameManager {
+            println("2回目以降")
+        } else {
+            println("初めて")
+            gameManager = GameManager()
+        } */
 
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self,
             selector: "update:", userInfo: nil, repeats: true)

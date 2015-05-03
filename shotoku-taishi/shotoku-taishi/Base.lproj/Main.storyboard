@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="shotoku_taishi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="vXZ-lx-hvc" customClass="ViewController" customModule="shotoku_taishi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -31,9 +31,6 @@
                                 <state key="normal" title="ランキング">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="f8z-Io-i6M" kind="presentation" animates="NO" id="Ee5-C3-1Cp"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqj-hu-OGE">
                                 <rect key="frame" x="278" y="481" width="45" height="30"/>
@@ -41,7 +38,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="f8z-Io-i6M" kind="presentation" animates="NO" id="eqG-Y1-ueb"/>
+                                    <segue destination="SXz-xR-T0t" kind="presentation" animates="NO" id="CN3-Er-oEp"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="聖徳太子ゲーム" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ex-kl-8Wf">
@@ -65,10 +62,49 @@
             </objects>
             <point key="canvasLocation" x="167" y="150"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="5xA-9J-4Z1">
+            <objects>
+                <viewController id="SXz-xR-T0t" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8bS-QQ-9ne"/>
+                        <viewControllerLayoutGuide type="bottom" id="6jk-EK-bYM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oBR-0H-dnf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwn-Gh-LXD">
+                                <rect key="frame" x="255" y="467" width="90" height="30"/>
+                                <state key="normal" title="トップに戻る">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="presentation" animates="NO" id="WE9-0A-eHS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="遊び方を説明する静的画面" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cD-Rb-u6A">
+                                <rect key="frame" x="198" y="208" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="5cD-Rb-u6A" secondAttribute="centerX" id="MIJ-7H-x6B"/>
+                            <constraint firstAttribute="centerX" secondItem="Dwn-Gh-LXD" secondAttribute="centerX" id="YVq-sn-nAg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="202-Ds-3nE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82" y="936"/>
+        </scene>
         <!--Sound View Controller-->
         <scene sceneID="0L4-08-9oN">
             <objects>
-                <viewController id="f8z-Io-i6M" customClass="SoundViewController" customModule="shotoku_taishi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SoundViewController" id="f8z-Io-i6M" customClass="SoundViewController" customModule="shotoku_taishi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ESz-V6-dUG"/>
                         <viewControllerLayoutGuide type="bottom" id="3DT-mn-Z8u"/>
@@ -83,15 +119,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMJ-mS-UY0">
+                                <rect key="frame" x="16" y="48" width="90" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="qqS-og-hYM" secondAttribute="trailing" constant="-16" id="Fgo-Ln-4J8"/>
+                            <constraint firstItem="JMJ-mS-UY0" firstAttribute="leading" secondItem="gC5-va-89c" secondAttribute="leadingMargin" id="HSV-Rc-diT"/>
                             <constraint firstItem="qqS-og-hYM" firstAttribute="leading" secondItem="gC5-va-89c" secondAttribute="leadingMargin" constant="-16" id="vh6-gg-Bg3"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="countDownLabel" destination="qqS-og-hYM" id="CgE-0f-uuw"/>
+                        <outlet property="currentQuestionLabel" destination="JMJ-mS-UY0" id="IJo-m8-N2j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAP-1A-xih" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,13 +155,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" tag="-1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="聴こえた単語をすべて選ぶのじゃ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weA-YP-H7w">
-                                <rect key="frame" x="0.0" y="63" width="600" height="93"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="90"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="りんご" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuZ-gB-0Xj">
-                                <rect key="frame" x="245" y="185" width="110" height="39"/>
+                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="いちご" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuZ-gB-0Xj">
+                                <rect key="frame" x="245" y="185" width="110" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="0gz-7I-6V8"/>
@@ -127,7 +171,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="マンゴー" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llo-aI-wtm">
-                                <rect key="frame" x="245" y="295" width="110" height="39"/>
+                                <rect key="frame" x="245" y="285" width="110" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="408-dz-t6K"/>
@@ -137,7 +181,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="ぶどう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlh-6g-3Bs">
-                                <rect key="frame" x="245" y="403" width="110" height="39"/>
+                                <rect key="frame" x="245" y="385" width="110" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bII-5K-MrO"/>
@@ -147,7 +191,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="メロン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AI-oI-R0k">
-                                <rect key="frame" x="245" y="239" width="110" height="39"/>
+                                <rect key="frame" x="245" y="235" width="110" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="S50-zv-bhM"/>
@@ -157,7 +201,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="バナナ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ww-D1-dT9">
-                                <rect key="frame" x="245" y="349" width="110" height="39"/>
+                                <rect key="frame" x="245" y="335" width="110" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="7fW-pF-M48"/>
@@ -167,20 +211,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz4-mb-vwi">
-                                <rect key="frame" x="238" y="494" width="125" height="30"/>
-                                <state key="normal" title="答え合わせ">
+                                <rect key="frame" x="238" y="500" width="125" height="30"/>
+                                <state key="normal" title="これじゃ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="85w-co-UXS" kind="presentation" identifier="segue" animates="NO" id="kpg-ar-FZJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqj-2E-c5f">
+                                <rect key="frame" x="494" y="48" width="90" height="30"/>
+                                <state key="normal" title="トップに戻る">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="azC-J7-xh9" eventType="touchUpInside" id="fkS-fI-Acf"/>
+                                    <segue destination="vXZ-lx-hvc" kind="presentation" animates="NO" id="t4q-3q-Y0i"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2f-vJ-d8d">
+                                <rect key="frame" x="16" y="48" width="90" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="h2f-vJ-d8d" firstAttribute="leading" secondItem="HLG-VK-CoB" secondAttribute="leadingMargin" id="7iQ-2M-xdX"/>
                             <constraint firstAttribute="centerX" secondItem="9Ww-D1-dT9" secondAttribute="centerX" id="B4l-bW-nBy"/>
                             <constraint firstAttribute="centerX" secondItem="wlh-6g-3Bs" secondAttribute="centerX" id="K3i-3M-YsN"/>
                             <constraint firstAttribute="centerX" secondItem="Yz4-mb-vwi" secondAttribute="centerX" id="T9h-KU-YcE"/>
+                            <constraint firstItem="Aqj-2E-c5f" firstAttribute="trailing" secondItem="HLG-VK-CoB" secondAttribute="trailingMargin" id="b9U-01-XtO"/>
                             <constraint firstItem="weA-YP-H7w" firstAttribute="leading" secondItem="HLG-VK-CoB" secondAttribute="leadingMargin" constant="-16" id="e4S-Rb-y9G"/>
                             <constraint firstAttribute="centerX" secondItem="llo-aI-wtm" secondAttribute="centerX" id="fFF-f3-Har"/>
                             <constraint firstAttribute="trailingMargin" secondItem="weA-YP-H7w" secondAttribute="trailing" constant="-16" id="fsT-Ur-gpH"/>
@@ -193,6 +255,7 @@
                     <connections>
                         <outlet property="apple" destination="SuZ-gB-0Xj" id="Wpq-xP-cJE"/>
                         <outlet property="banana" destination="9Ww-D1-dT9" id="tSQ-Gx-wvp"/>
+                        <outlet property="currentQuestionLabel" destination="h2f-vJ-d8d" id="YJh-Rx-Fha"/>
                         <outlet property="grape" destination="wlh-6g-3Bs" id="1jG-oL-5Hw"/>
                         <outlet property="mango" destination="llo-aI-wtm" id="JZG-cL-6qe"/>
                         <outlet property="melon" destination="2AI-oI-R0k" id="je6-43-1K5"/>
@@ -205,7 +268,7 @@
         <!--Answer View Controller-->
         <scene sceneID="o9C-1K-mac">
             <objects>
-                <viewController id="85w-co-UXS" customClass="AnswerViewController" customModule="shotoku_taishi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnswerViewController" id="85w-co-UXS" customClass="AnswerViewController" customModule="shotoku_taishi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gnp-7r-qVM"/>
                         <viewControllerLayoutGuide type="bottom" id="HsZ-cZ-C2m"/>
@@ -214,8 +277,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="りんご" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuP-O7-Rsx">
-                                <rect key="frame" x="245" y="193" width="110" height="39"/>
+                            <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="いちご" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuP-O7-Rsx">
+                                <rect key="frame" x="245" y="185" width="110" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="I46-dn-pc1"/>
@@ -225,13 +288,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8b2-ZQ-9SR">
-                                <rect key="frame" x="0.0" y="67" width="600" height="93"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="90"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="メロン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZv-kL-0Lw">
-                                <rect key="frame" x="245" y="245" width="110" height="39"/>
+                                <rect key="frame" x="245" y="235" width="110" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="BCX-AH-os2"/>
@@ -241,7 +304,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="マンゴー" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bz6-gJ-w2g">
-                                <rect key="frame" x="245" y="298" width="110" height="39"/>
+                                <rect key="frame" x="245" y="285" width="110" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="mc5-37-yGQ"/>
@@ -251,7 +314,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="バナナ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXy-LB-rhg">
-                                <rect key="frame" x="245" y="351" width="110" height="39"/>
+                                <rect key="frame" x="245" y="335" width="110" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="VGq-Lj-W1u"/>
@@ -261,7 +324,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="ぶどう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6s-Dw-Mcn">
-                                <rect key="frame" x="245" y="405" width="110" height="39"/>
+                                <rect key="frame" x="245" y="385" width="110" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="EYd-3y-wxG"/>
@@ -271,29 +334,50 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gM7-3x-bht">
-                                <rect key="frame" x="238" y="497" width="125" height="30"/>
+                                <rect key="frame" x="238" y="500" width="125" height="30"/>
+                                <state key="normal" title="次へ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextOrReset:" destination="85w-co-UXS" eventType="touchUpInside" id="f9L-Kv-kbp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRa-AR-vix">
+                                <rect key="frame" x="494" y="48" width="90" height="30"/>
                                 <state key="normal" title="トップに戻る">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="presentation" animates="NO" id="HyC-d0-y3w"/>
+                                    <action selector="reset:" destination="85w-co-UXS" eventType="touchUpInside" id="n3R-PG-LAc"/>
+                                    <segue destination="vXZ-lx-hvc" kind="presentation" animates="NO" id="A6c-ZU-pz0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yah-od-moB">
+                                <rect key="frame" x="16" y="48" width="90" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Z6s-Dw-Mcn" secondAttribute="centerX" id="6Zc-Li-tXz"/>
                             <constraint firstAttribute="centerX" secondItem="AuP-O7-Rsx" secondAttribute="centerX" id="BXe-p6-p9X"/>
+                            <constraint firstItem="aRa-AR-vix" firstAttribute="trailing" secondItem="8Ng-l0-wvM" secondAttribute="trailingMargin" id="EJ6-wo-lyR"/>
                             <constraint firstAttribute="centerX" secondItem="gM7-3x-bht" secondAttribute="centerX" id="Rmp-lj-KSb"/>
                             <constraint firstAttribute="centerX" secondItem="jXy-LB-rhg" secondAttribute="centerX" id="SvY-ge-Ddg"/>
                             <constraint firstItem="8b2-ZQ-9SR" firstAttribute="leading" secondItem="8Ng-l0-wvM" secondAttribute="leadingMargin" constant="-16" id="WKf-c9-clK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8b2-ZQ-9SR" secondAttribute="trailing" constant="-16" id="gb3-On-9c8"/>
+                            <constraint firstItem="yah-od-moB" firstAttribute="leading" secondItem="8Ng-l0-wvM" secondAttribute="leadingMargin" id="pFy-CW-FQy"/>
                             <constraint firstAttribute="centerX" secondItem="eZv-kL-0Lw" secondAttribute="centerX" id="qhm-xq-EI1"/>
                             <constraint firstAttribute="centerX" secondItem="Bz6-gJ-w2g" secondAttribute="centerX" id="tqw-7c-Ytd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentQuestionLabel" destination="yah-od-moB" id="dNO-9H-g4W"/>
                         <outlet property="message" destination="8b2-ZQ-9SR" id="srG-Vy-Ew7"/>
+                        <outlet property="nextButton" destination="gM7-3x-bht" id="4aY-bQ-khs"/>
+                        <outlet property="quitButton" destination="aRa-AR-vix" id="G1q-bG-NW5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2f-fv-waB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -302,6 +386,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eqG-Y1-ueb"/>
+        <segue reference="WE9-0A-eHS"/>
     </inferredMetricsTieBreakers>
 </document>
