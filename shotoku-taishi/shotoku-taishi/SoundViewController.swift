@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import iAd
 
 class SoundViewController: UIViewController {
 
@@ -22,6 +23,8 @@ class SoundViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.canDisplayBannerAds = true
+        
         currentQuestionLabel.text
             = "\(gameManager.getCurrentGameCount()) / \(gameManager.MAX_COUNT)"
 

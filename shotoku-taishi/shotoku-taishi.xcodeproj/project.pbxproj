@@ -20,6 +20,7 @@
 		722D06D91AF4893B006E518B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 722D06D81AF4893B006E518B /* Images.xcassets */; };
 		722D06DC1AF4893B006E518B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 722D06DA1AF4893B006E518B /* LaunchScreen.xib */; };
 		722D06E81AF4893B006E518B /* shotoku_taishiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722D06E71AF4893B006E518B /* shotoku_taishiTests.swift */; };
+		72580FF11AFE070F001E16B5 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72580FF01AFE070F001E16B5 /* iAd.framework */; };
 		72DE12851AF5DE0600A10067 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DE12841AF5DE0600A10067 /* SoundManager.swift */; };
 		72DE128B1AF5EB7C00A10067 /* banana.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 72DE12881AF5EA7300A10067 /* banana.m4a */; };
 		72DE128C1AF5EB7C00A10067 /* ichigo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 72DE12891AF5EA7300A10067 /* ichigo.m4a */; };
@@ -54,6 +55,7 @@
 		722D06E11AF4893B006E518B /* shotoku-taishiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shotoku-taishiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		722D06E61AF4893B006E518B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		722D06E71AF4893B006E518B /* shotoku_taishiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shotoku_taishiTests.swift; sourceTree = "<group>"; };
+		72580FF01AFE070F001E16B5 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		72DE12841AF5DE0600A10067 /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		72DE12881AF5EA7300A10067 /* banana.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = banana.m4a; path = Resources/banana.m4a; sourceTree = "<group>"; };
 		72DE12891AF5EA7300A10067 /* ichigo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = ichigo.m4a; path = Resources/ichigo.m4a; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72580FF11AFE070F001E16B5 /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 		722D06C31AF4893A006E518B = {
 			isa = PBXGroup;
 			children = (
+				72580FF01AFE070F001E16B5 /* iAd.framework */,
 				722D06CE1AF4893B006E518B /* shotoku-taishi */,
 				722D06E41AF4893B006E518B /* shotoku-taishiTests */,
 				722D06CD1AF4893B006E518B /* Products */,

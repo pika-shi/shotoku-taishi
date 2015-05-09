@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import iAd
 
 class AnswerViewController: UIViewController {
 
@@ -22,6 +23,8 @@ class AnswerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.canDisplayBannerAds = true
+        
         if _answerArray == shotokuArray {
             message.text = "お主は聖徳太子レベルじゃ"
         } else {

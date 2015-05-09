@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import iAd
 
 class QuestionViewController: UIViewController {
 
@@ -28,6 +29,7 @@ class QuestionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.canDisplayBannerAds = true
 
         apple.tag  = APPLE
         melon.tag  = MELON
