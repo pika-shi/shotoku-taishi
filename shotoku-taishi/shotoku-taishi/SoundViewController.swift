@@ -11,7 +11,7 @@ import iAd
 
 class SoundViewController: UIViewController {
 
-    let maxCount = 3
+    let maxCount = 3 // 何秒カウントダウンするか
 
     var count : Int = 1
     @IBOutlet weak var countDownLabel: UILabel!
@@ -26,7 +26,7 @@ class SoundViewController: UIViewController {
         self.canDisplayBannerAds = true
         
         currentQuestionLabel.text
-            = "\(gameManager.getCurrentGameCount()) / \(gameManager.MAX_COUNT)"
+            = "\(gameManager.getCurrentGameCount()) / \(gameManager.GAME_COUNT)"
 
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self,
             selector: "update:", userInfo: nil, repeats: true)
@@ -61,8 +61,6 @@ class SoundViewController: UIViewController {
     func transition() {
         let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let next:UIViewController = storyboard.instantiateViewControllerWithIdentifier("QuestionViewController") as! UIViewController
-
-        // next.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
         self.presentViewController(next, animated: false, completion: nil)
     }
 

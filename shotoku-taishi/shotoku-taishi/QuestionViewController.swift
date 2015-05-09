@@ -11,36 +11,35 @@ import iAd
 
 class QuestionViewController: UIViewController {
 
-    let APPLE  = 0
-    let MELON  = 1
-    let MANGO  = 2
-    let BANANA = 3
-    let GRAPE  = 4
-
-    var answerArray = Array(count: 5, repeatedValue: false)
     var gameManager: GameManager = GameManager.sharedInstance
     @IBOutlet weak var currentQuestionLabel: UILabel!
 
-    @IBOutlet weak var apple:  UILabel!
-    @IBOutlet weak var melon:  UILabel!
-    @IBOutlet weak var mango:  UILabel!
-    @IBOutlet weak var banana: UILabel!
-    @IBOutlet weak var grape:  UILabel!
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
+    @IBOutlet weak var label4: UILabel!
+    @IBOutlet weak var label5: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.canDisplayBannerAds = true
 
-        apple.tag  = APPLE
-        melon.tag  = MELON
-        mango.tag  = MANGO
-        banana.tag = BANANA
-        grape.tag  = GRAPE
+        gameManager.readyToAnswer()
+
+        label1.tag = 0
+        label2.tag = 1
+        label3.tag = 2
+        label4.tag = 3
+        label5.tag = 4
+
+        label1.text = gameManager.options[label1.tag]
+        label2.text = gameManager.options[label2.tag]
+        label3.text = gameManager.options[label3.tag]
+        label4.text = gameManager.options[label4.tag]
+        label5.text = gameManager.options[label5.tag]
 
         currentQuestionLabel.text
-            = "\(gameManager.getCurrentGameCount()) / \(gameManager.MAX_COUNT)"
-
-        // println("Question: \(gameManager.getCurrentGameCount())")
+            = "\(gameManager.getCurrentGameCount()) / \(gameManager.GAME_COUNT)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,8 +49,7 @@ class QuestionViewController: UIViewController {
 
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         for touch: AnyObject in touches {
-            // let location = touch.locationInNode(self)
-            // myImage.position = location
+            // なぜか必要
         }
     }
     
@@ -60,73 +58,72 @@ class QuestionViewController: UIViewController {
 
         for touch: AnyObject in touches {
             var t: UITouch = touch as! UITouch
-            // println(t.view.tag)
             switch t.view.tag {
-            case apple.tag:
-                toggleLabel(APPLE)
-            case melon.tag:
-                toggleLabel(MELON)
-            case mango.tag:
-                toggleLabel(MANGO)
-            case banana.tag:
-                toggleLabel(BANANA)
-            case grape.tag:
-                toggleLabel(GRAPE)
+            case label1.tag:
+                toggleLabel(label1.tag)
+            case label2.tag:
+                toggleLabel(label2.tag)
+            case label3.tag:
+                toggleLabel(label3.tag)
+            case label4.tag:
+                toggleLabel(label4.tag)
+            case label5.tag:
+                toggleLabel(label5.tag)
             default:
                 break
             }
         }
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "segue") {
-            var answerView : AnswerViewController
-                = segue.destinationViewController as! AnswerViewController
-            answerView._answerArray = answerArray
-        }
-    }
+    // override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    //     if (segue.identifier == "segue") {
+    //         var answerView : AnswerViewController
+    //             = segue.destinationViewController as! AnswerViewController
+    //         answerView._answerArray = answerArray
+    //     }
+    // }
 
-    func toggleLabel(fruitNumber: Int) {
-        switch fruitNumber {
-        case APPLE:
-            if answerArray[APPLE] {
-                apple.backgroundColor = UIColor.lightGrayColor()
-                answerArray[APPLE] = false
+    func toggleLabel(labelNumber: Int) {
+        switch labelNumber {
+        case label1.tag:
+            if gameManager.getUserAnswer(label1.tag) {
+                label1.backgroundColor = UIColor.lightGrayColor()
+                gameManager.removeUserAnswers(label1.tag)
             } else {
-                apple.backgroundColor = UIColor.orangeColor()
-                answerArray[APPLE] = true
+                label1.backgroundColor = UIColor.orangeColor()
+                gameManager.addUserAnswers(label1.tag)
             }
-        case MELON:
-            if answerArray[MELON] {
-                melon.backgroundColor = UIColor.lightGrayColor()
-                answerArray[MELON] = false
+        case label2.tag:
+            if gameManager.getUserAnswer(label2.tag) {
+                label2.backgroundColor = UIColor.lightGrayColor()
+                gameManager.removeUserAnswers(label2.tag)
             } else {
-                melon.backgroundColor = UIColor.orangeColor()
-                answerArray[MELON] = true
+                label2.backgroundColor = UIColor.orangeColor()
+                gameManager.addUserAnswers(label2.tag)
             }
-        case MANGO:
-            if answerArray[MANGO] {
-                mango.backgroundColor = UIColor.lightGrayColor()
-                answerArray[MANGO] = false
+        case label3.tag:
+            if gameManager.getUserAnswer(label3.tag) {
+                label3.backgroundColor = UIColor.lightGrayColor()
+                gameManager.removeUserAnswers(label3.tag)
             } else {
-                mango.backgroundColor = UIColor.orangeColor()
-                answerArray[MANGO] = true
+                label3.backgroundColor = UIColor.orangeColor()
+                gameManager.addUserAnswers(label3.tag)
             }
-        case BANANA:
-            if answerArray[BANANA] {
-                banana.backgroundColor = UIColor.lightGrayColor()
-                answerArray[BANANA] = false
+        case label4.tag:
+            if gameManager.getUserAnswer(label4.tag) {
+                label4.backgroundColor = UIColor.lightGrayColor()
+                gameManager.removeUserAnswers(label4.tag)
             } else {
-                banana.backgroundColor = UIColor.orangeColor()
-                answerArray[BANANA] = true
+                label4.backgroundColor = UIColor.orangeColor()
+                gameManager.addUserAnswers(label4.tag)
             }
-        case GRAPE:
-            if answerArray[GRAPE] {
-                grape.backgroundColor = UIColor.lightGrayColor()
-                answerArray[GRAPE] = false
+        case label5.tag:
+            if gameManager.getUserAnswer(label5.tag) {
+                label5.backgroundColor = UIColor.lightGrayColor()
+                gameManager.removeUserAnswers(label5.tag)
             } else {
-                grape.backgroundColor = UIColor.orangeColor()
-                answerArray[GRAPE] = true
+                label5.backgroundColor = UIColor.orangeColor()
+                gameManager.addUserAnswers(label5.tag)
             }
         default:
             break

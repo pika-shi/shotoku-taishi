@@ -11,11 +11,14 @@ import iAd
 
 class AnswerViewController: UIViewController {
 
-    var _answerArray = []
-    var shotokuArray = [true, false, true, true, false]
-
     @IBOutlet weak var currentQuestionLabel: UILabel!
     var gameManager: GameManager = GameManager.sharedInstance
+
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
+    @IBOutlet weak var label4: UILabel!
+    @IBOutlet weak var label5: UILabel!
 
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var quitButton: UIButton!
@@ -24,15 +27,38 @@ class AnswerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.canDisplayBannerAds = true
-        
-        if _answerArray == shotokuArray {
-            message.text = "お主は聖徳太子レベルじゃ"
-        } else {
-            message.text = "常人では仕方あるまい…"
+
+        label1.text = gameManager.options[0]
+        label2.text = gameManager.options[1]
+        label3.text = gameManager.options[2]
+        label4.text = gameManager.options[3]
+        label5.text = gameManager.options[4]
+
+        if contains(gameManager.answers, label1.text!) {
+            label1.backgroundColor = UIColor.orangeColor()
+        }
+        if contains(gameManager.answers, label2.text!) {
+            label2.backgroundColor = UIColor.orangeColor()
+        }
+        if contains(gameManager.answers, label3.text!) {
+            label3.backgroundColor = UIColor.orangeColor()
+        }
+        if contains(gameManager.answers, label4.text!) {
+            label4.backgroundColor = UIColor.orangeColor()
+        }
+        if contains(gameManager.answers, label5.text!) {
+            label5.backgroundColor = UIColor.orangeColor()
         }
 
+        if gameManager.isCorrect() {
+            message.text = "正解！"
+        } else {
+            message.text = "残念！"
+        }
+        // println(gameManager.answers)
+
         currentQuestionLabel.text
-            = "\(gameManager.getCurrentGameCount()) / \(gameManager.MAX_COUNT)"
+            = "\(gameManager.getCurrentGameCount()) / \(gameManager.GAME_COUNT)"
 
         if gameManager.isFinalGame() {
             quitButton.hidden = true
