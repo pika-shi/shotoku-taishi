@@ -36,8 +36,6 @@ class GameManager {
 
     init() {
         currentGameCount = 1
-        setSounds()
-        setOptions()
     }
 
     func start() {
