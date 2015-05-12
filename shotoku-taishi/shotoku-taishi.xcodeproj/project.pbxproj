@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		332E39AF1AF62AEE00361ADF /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332E39AE1AF62AEE00361ADF /* GameManager.swift */; };
+		33ABA2B61B0268C700D76008 /* cherry.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 33ABA2B51B0268C700D76008 /* cherry.m4a */; };
 		33AFE8271AF6A98E00911D6E /* grape.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 33AFE8241AF6A98E00911D6E /* grape.m4a */; };
 		33AFE8281AF6A98E00911D6E /* melon.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 33AFE8251AF6A98E00911D6E /* melon.m4a */; };
 		33AFE8291AF6A98E00911D6E /* ringo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 33AFE8261AF6A98E00911D6E /* ringo.m4a */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		332E39AE1AF62AEE00361ADF /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		33ABA2B51B0268C700D76008 /* cherry.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = cherry.m4a; sourceTree = "<group>"; };
 		33AFE8241AF6A98E00911D6E /* grape.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = grape.m4a; path = Resources/grape.m4a; sourceTree = "<group>"; };
 		33AFE8251AF6A98E00911D6E /* melon.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = melon.m4a; path = Resources/melon.m4a; sourceTree = "<group>"; };
 		33AFE8261AF6A98E00911D6E /* ringo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = ringo.m4a; path = Resources/ringo.m4a; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		72DE12871AF5EA3300A10067 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				33ABA2B51B0268C700D76008 /* cherry.m4a */,
 				33AFE8241AF6A98E00911D6E /* grape.m4a */,
 				33AFE8251AF6A98E00911D6E /* melon.m4a */,
 				33AFE8261AF6A98E00911D6E /* ringo.m4a */,
@@ -260,6 +263,7 @@
 				33AFE8271AF6A98E00911D6E /* grape.m4a in Resources */,
 				722D06DC1AF4893B006E518B /* LaunchScreen.xib in Resources */,
 				722D06D91AF4893B006E518B /* Images.xcassets in Resources */,
+				33ABA2B61B0268C700D76008 /* cherry.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

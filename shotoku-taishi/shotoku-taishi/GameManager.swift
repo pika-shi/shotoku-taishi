@@ -26,7 +26,8 @@ class GameManager {
                   "ringo" : "りんご",
                   "banana": "バナナ",
                   "ichigo": "いちご",
-                  "mango" : "マンゴー"]
+                  "mango" : "マンゴー",
+                  "cherry": "さくらんぼ"]
 
     var currentGameCount: Int    = 0
     var sounds: Array<String>    = []
